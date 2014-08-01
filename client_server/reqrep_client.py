@@ -20,7 +20,8 @@ if len(sys.argv) > 2:
 #  Do 10 requests, waiting each time for a response
 for request in range (1,10):
     print "Sending request ", request,"..."
-    socket.send ("Hello")
+    message = raw_input("Message: ")
+    socket.send (message)
     #  Get the reply.
     message = socket.recv()
     print "Received reply ", request, "[", message, "]"
